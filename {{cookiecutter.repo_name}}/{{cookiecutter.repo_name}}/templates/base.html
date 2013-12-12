@@ -1,4 +1,6 @@
-{% raw %}{% load staticfiles %}<!DOCTYPE html>
+{% raw %}
+{% load staticfiles %}
+<!DOCTYPE html>
 <html lang="en" ng-app>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
@@ -14,31 +16,57 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="icon" type="image/gif" href="{% static 'img/favicon.gif' %}">
-
     {% block css %}
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
-    {% endblock %}
+        <link href="{% static 'css/foundation.css' %}" rel="stylesheet">
+    {% endblock css %}
 
   </head>
 
-  <body>
+  <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}">
     
-    <div class="container">
+      {% block topbar %}
+      <div class="contain-to-grid sticky">
+          <nav class="top-bar" data-topbar>
+          		<ul class="title-area">
+          		    <li class="name">
+          		      <h1><a href="/">{{cookiecutter.project_name}}</a></h1>
+          		    </li>
+          		    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+          		</ul>
+      	        <section class="top-bar-section">
+      	        	<ul class="right">
+  			          {% block nav %}
+  			              {% include "_navbar.html" %}
+  			          {% endblock %}
+      	        	</ul>
+      	        </section>
+          </nav>
+      </div>
+      {% endblock topbar %}
+    
 
       {% block content %}
-        <p>This is Lendl's Project</p>
+          <div class="container">
+          <p>Use this document as a way to quick start any new project.</p>
+          </div>
       {% endblock content %}
+      
+      {% block footer %}
+      	<footer class="row">
+      		{% include "_footer.html" %}
+      	</footer>
+      {% endblock footer %}
 
-    </div> <!-- /container -->
 
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     {% block javascript %}
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-      <script src="{% static 'js/scripts.js' %}"></script>
+      <script src="{% static 'js/modernizr.js' %}"></script>
+      <script src="{% static 'js/jquery.js' %}"></script>
+      <script src="{% static 'js/foundation.min.js' %}"></script>
+      <script>
+        $(document).foundation();
+      </script>
     {% endblock javascript %}
   </body>
-</html>{% endraw %}
+
+</html>
+{% endraw %}
