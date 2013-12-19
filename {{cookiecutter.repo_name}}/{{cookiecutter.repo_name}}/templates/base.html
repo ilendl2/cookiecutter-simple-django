@@ -17,6 +17,9 @@
 
     {% block css %}
         <link href="{% static 'css/foundation.css' %}" rel="stylesheet">
+        <link href="{% static 'css/foundation-icons.css' %}" rel="stylesheet">
+        <link href="{% static 'css/fc-webicons.css' %}" rel="stylesheet">
+        <link href="{% static 'css/site/site_styles.css' %}" rel="stylesheet">
     {% endblock css %}
 
   </head>
@@ -58,12 +61,15 @@
 
 
     {% block javascript %}
-      <script src="{% static 'js/jquery.js' %}"></script>
-      <script src="{% static 'js/modernizr.js' %}"></script>
-      <script src="{% static 'js/foundation.min.js' %}"></script>
-      <script>
-        $(document).foundation();
-      </script>
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <script src="{% static 'js/modernizr.js' %}"></script>
+        <script src="{% static 'js/foundation.min.js' %}"></script>
+        <script>
+          $(document).foundation();
+        </script>
+        
+        <script src="{% static 'js/site/klass.min.js' %}"></script>
+        <script src="{% static 'js/site/site_js.js' %}"></script>
     {% endblock javascript %}
   </body>
 

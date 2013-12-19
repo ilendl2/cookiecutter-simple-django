@@ -104,6 +104,18 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = [
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.request",
+    "django.contrib.messages.context_processors.messages",
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'utils.context_processors.site_settings',
+]
+
 ROOT_URLCONF = '{{cookiecutter.repo_name}}.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
@@ -113,7 +125,7 @@ TEMPLATE_DIRS = (
     root('templates'),
 )
 
-INSTALLED_APPS = (
+DJANGO_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -121,10 +133,24 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'south',
 )
 
-PROJECT_APPS = ()
+THIRD_PARTY_APPS = (
+    'south',
+    "django_extensions",
+    "floppyforms",
+    "model_utils",
+    'autoslug',
+)
+
+LOCAL_APPS = (
+    'utils',
+)
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+
+INSTALLED_APPS += ()
+
 
 INSTALLED_APPS += PROJECT_APPS
 

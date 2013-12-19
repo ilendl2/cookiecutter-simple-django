@@ -1,0 +1,49 @@
+Django
+ 
+git+https://github.com/chrisdev/python-markdown-flex-video.git
+ 
+# configuration
+django-secure==1.0
+django-cache-url==0.6.0
+dj-database-url==0.2.2
+
+# Admin
+ django-frontendadmin==0.4
+
+# Forms/View helpers
+django-floppyforms==1.1
+django-braces==1.2.2
+
+# Model Helpers
+django-model-utils==1.5.0
+
+
+# Markdown
+Markdown==2.3.1
+django-markitup==1.0.0
+
+# Images
+easy-thumbnails==1.2
+Pillow==2.2.1
+
+# Persistent storage
+#psycopg2==2.5.1
+simplejson==3.3.0
+
+# Migration
+South==0.8.0
+
+# Utilities
+django-extensions==1.1.1
+
+# Authentication
+django-allauth==0.13.0
+
+# Unicode slugification
+unicode-slugify==0.1.1
+django-autoslug==1.7.1
+
+# deployment
+cuisine==0.6.3
+Fabric==1.6.0
+PyYAML==3.10
