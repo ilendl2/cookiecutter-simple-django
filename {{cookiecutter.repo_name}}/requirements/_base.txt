@@ -1,4 +1,4 @@
-Django
+Django==1.6.1
  
 git+https://github.com/chrisdev/python-markdown-flex-video.git
  
