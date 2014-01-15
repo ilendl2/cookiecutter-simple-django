@@ -35,6 +35,7 @@ South==0.8.0
 
 # Utilities
 django-extensions==1.1.1
+bpython==0.12
 
 # Authentication
 django-allauth==0.13.0

@@ -46,18 +46,13 @@
       </div>
       {% endblock topbar %}
     
-
-      {% block content %}
-          <div class="container">
-          <p>Use this document as a way to quick start any new project.</p>
-          </div>
-      {% endblock content %}
+      <div id="content">
+          {% block content %}{% endblock content %}
+      </div>
       
-      {% block footer %}
-      	<footer class="row">
-      		{% include "_footer.html" %}
-      	</footer>
-      {% endblock footer %}
+      <footer>
+          {% block footer %}{% include "_footer.html" %}{% endblock footer %}
+      </footer>
 
 
     {% block javascript %}

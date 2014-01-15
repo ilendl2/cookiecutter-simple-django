@@ -2,6 +2,8 @@ body {background: #f9f9f9;}
 
 p, li {font-size: 14px;}
 
+#content {padding-top: 20px;padding-bottom: 20px;min-height:500px;}
+
 /*---FOOTER---*/
 
 li.social {list-style: none;padding-top: 8px;text-align: center;}
