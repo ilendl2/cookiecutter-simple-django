@@ -12,6 +12,7 @@
         
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <script src="{% static 'js/vendor/modernizr.js' %}"></script>
         
         {% block css %}
             <link href="{% static 'css/foundation.css' %}" rel="stylesheet">
@@ -49,8 +50,7 @@
     
     
         {% block javascript %}
-            <script src="{% static 'js/jquery.js' %}"></script>
-            <script src="{% static 'js/modernizr.js' %}"></script>
+            <script src="{% static 'js/vendor/jquery.js' %}"></script>
             <script src="{% static 'js/foundation.min.js' %}"></script>
             <script>
               $(document).foundation();
